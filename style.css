@@ -13,7 +13,7 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
-img {
+#img {
     width: 100%;
     height: 100%;
 }
@@ -78,6 +78,7 @@ img {
 
 #data {
     position: absolute;
+    
     display: flex;
     top: 21vh;
     left: 50%;
@@ -94,7 +95,6 @@ img {
     flex-direction: column;
     width: 19vw;
     padding: 0px 0px 0px 30px ;
-    
 }
 
 
@@ -109,13 +109,59 @@ img {
 .d-data {
     display: flex;
     font-weight: 500;
+    overflow-wrap: break-word;
     height: 100%;
+    width: 100%;
     padding-top: 10px;
-    padding-right: 50px;
+    /* padding-right: 50px; */
     border-right: 1px solid var(--Dark-Gray);
 }
 
 .d-con:last-child > .d-data {
     border: none;
 }
+
+@media only screen and (max-width: 1200px) {
+    .d-con {
+        width: 24vw;
+    }
+    
+}
+
+@media only screen and (max-width: 900px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    #ip-address {
+        width: 85%;
+    }
+
+    #data {
+        top: 20vh;
+        flex-direction: column;
+        width: 85%;
+        padding: 20px;
+    }
+
+    .d-con {
+        width: 100%;
+        padding: 10px 30px;
+        align-items: center;
+    }
+
+    .d-label {
+        font-size: .6rem;
+    }
+
+    .d-data {
+        font-size: 1.3rem;
+        padding-right: 0px;
+        width: 100%;
+        display: block;
+        border: none;
+        text-align: center;
+    }
+}
+
 
